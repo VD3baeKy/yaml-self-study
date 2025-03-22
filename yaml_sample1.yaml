@@ -1,0 +1,48 @@
+# アプリケーション設定
+app:
+  name: MyApp
+  version: 1.0.0
+  environment: production
+
+# サーバー設定
+server:
+  host: localhost
+  port: 8080
+  ssl: true
+  timeout: 30  # 秒
+
+# データベース設定
+database:
+  type: postgresql
+  host: db.example.com
+  port: 5432
+  username: db_user
+  password: db_pass
+  database_name: my_database
+  options:
+    sslmode: require
+    connection_timeout: 10
+
+# ユーザー情報
+users:
+  - id: 1
+    name: 人物１
+    email: jhon.one@example.com
+    roles:
+      - admin
+      - user
+  - id: 2
+    name: 人物２
+    email: jhon.two@example.com
+    roles:
+      - user
+
+# ログ設定
+logging:
+  level: info
+  file: /var/log/myapp.log
+  rotation:
+    enabled: true
+    max_size: 10MB
+    max_age: 30  # 日数
+    
